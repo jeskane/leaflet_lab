@@ -1,1 +1,92 @@
 /* Stylesheet by Jessica Kane, 2018 */
+
+html, body, #map {
+    height: 100%;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    color: #F3F3F1;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#map {
+    z-index: 5;
+    display: inline-block;
+}
+
+#title {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 10;
+    background-color: rgba(85, 89, 89, 0.85);
+    width: 380px;
+    height: 60px;
+    padding: 15px;
+}
+
+.leaflet-popup-content p {
+    margin: 0.2em 0;
+}
+
+.sequence-control-container {
+    width: 300px;
+    height: 30px;
+    background-color: rgba(85, 89, 89, 0.85);
+    padding: 10px;
+    line-height: 45px;
+    text-align: center;
+}
+
+.range-slider {
+    width: 200px;
+}
+
+#forward {
+    float: right;
+}
+
+#reverse {
+    float: left;
+}
+
+.legend-control-container {
+    /*position: fixed;
+    right: 10px;
+    bottom: 10px;*/
+    padding: 10px;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(85, 89, 89, 0.85);
+}
+
+h3, h2 {
+   margin: 0px; 
+}
+
+#temporal-legend-gen {
+    float: left;
+    width: 150px;
+}
+
+#temporal-legend-rec {
+    float: right;
+    width: 150px;
+}
+
+#legend-genSVG {
+    float: left;
+}
+
+#legend-recSVG {
+    float: right;
+}
+
+@media (max-width: 450px) {
+    .legend-control-container, a.leaflet-control-zoom-in, a.leaflet-control-zoom-out, a.leaflet-control-layers-toggle {
+        display: none;
+    }
+}

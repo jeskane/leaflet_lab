@@ -1,1 +1,0 @@
-/* By Jessica Kane, 2018 */
