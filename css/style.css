@@ -5,11 +5,16 @@ html, body, #map {
     width: 100%;
     font-family: 'Open Sans', sans-serif;
     color: #F3F3F1;
+    overflow: hidden;
 }
 
 body {
     padding: 0;
     margin: 0;
+}
+
+h3, h2 {
+   margin: 0px; 
 }
 
 #map {
@@ -28,17 +33,17 @@ body {
     padding: 15px;
 }
 
-.leaflet-popup-content p {
-    margin: 0.2em 0;
-}
-
+/* -------Sequence control and slider------- */
 .sequence-control-container {
     width: 300px;
-    height: 30px;
+    height: 65px;
     background-color: rgba(85, 89, 89, 0.85);
     padding: 10px;
     line-height: 45px;
     text-align: center;
+    padding-top: 0px;
+    position: fixed;
+    bottom: 25px;
 }
 
 .range-slider {
@@ -53,40 +58,78 @@ body {
     float: left;
 }
 
-.legend-control-container {
-    /*position: fixed;
-    right: 10px;
-    bottom: 10px;*/
-    padding: 10px;
-    width: 300px;
-    height: 300px;
-    background-color: rgba(85, 89, 89, 0.85);
+#year {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    height: 30px;
 }
 
-h3, h2 {
-   margin: 0px; 
+/* ----------------Legend---------------- */
+.legend-control-container-gen {
+    position: fixed;
+    right: 10px;
+    bottom: 120px;
+    padding: 10px;
+    background-color: rgba(85, 89, 89, 0.85);
+    height: 60px;
+}
+
+.legend-control-container-rec {
+    position: fixed;
+    right: 10px;
+    bottom: 25px;
+    background-color: rgba(85, 89, 89, 0.85);
+    padding: 10px;
 }
 
 #temporal-legend-gen {
     float: left;
-    width: 150px;
+    width: 130px;
+    padding-top: 15px;
 }
 
 #temporal-legend-rec {
-    float: right;
-    width: 150px;
-}
-
-#legend-genSVG {
     float: left;
+    width: 130px;
+    padding-top: 5px;
 }
 
-#legend-recSVG {
-    float: right;
+.legendText {
+    font-family: 'Open Sans', sans-serif;
+    fill: #F3F3F1;
 }
 
-@media (max-width: 450px) {
-    .legend-control-container, a.leaflet-control-zoom-in, a.leaflet-control-zoom-out, a.leaflet-control-layers-toggle {
+/* ----------------PopUps---------------- */
+.leaflet-popup-content p {
+    margin: 0.2em 0;
+}
+
+#popupTitle {
+    text-align: center;
+}
+
+.gen-popup .leaflet-popup-content-wrapper {
+    background: #CE7816;
+    color: #F3F3F1;
+}
+
+.gen-popup .leaflet-popup-tip {
+    background: #CE7816;
+}
+
+.rec-popup .leaflet-popup-content-wrapper {
+    background: #006FFF;
+    color: #F3F3F1;
+}
+
+.rec-popup .leaflet-popup-tip {
+    background: #006FFF;
+}
+
+/* --------------Small Screens-------------- */
+@media (max-width: 670px) {
+    .legend-control-container-gen, .legend-control-container-rec, a.leaflet-control-zoom-in, a.leaflet-control-zoom-out, .leaflet-control-layers, .leaflet-control-attribution {
         display: none;
     }
 }
